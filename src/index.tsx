@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import './index.scss'
 import App from './App'
 
@@ -8,7 +8,10 @@ import App from './App'
 // import 'bootstrap/dist/css/bootstrap.css';
 
 // Single-page application (SPA)
-ReactDOM.render(<App />, document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render(
+    <App />
+);
 
 // If you want to Pre-render with react-snap
 // Step 1: install $ yarn add --dev react-snap

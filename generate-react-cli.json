@@ -122,6 +122,14 @@
       "withType": true,
       "withStory": false,
       "withLazy": false
+    },
+    "redux-slice": {
+      "customTemplates": {
+        "component": "templates/redux/slice/TemplateName.slice.ts"
+      },
+      "path": "src/redux",
+      "withLazy": false,
+      "withStory": false
     }
   }
 }
