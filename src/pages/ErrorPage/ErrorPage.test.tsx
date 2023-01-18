@@ -16,8 +16,8 @@ import ErrorPage from './ErrorPage'
 const routeComponentPropsMock = {
   history: {
     location: {
-      pathname: '/ErrorPage'
-    }
+      pathname: '/ErrorPage',
+    },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -29,7 +29,7 @@ describe('<ErrorPage />', () => {
   let component
 
   beforeEach(() => {
-    component = shallow(<ErrorPage {...routeComponentPropsMock} />)
+    component = shallow(<ErrorPage code={0} {...routeComponentPropsMock} />)
   })
 
   test('It should mount', () => {

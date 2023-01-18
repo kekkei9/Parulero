@@ -1,19 +1,39 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import { Provider, useSelector } from 'react-redux'
 import './App.scss'
-import store from './redux/store'
-import AppRouter from './AppRouter'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ThemeProvider, createTheme } from '@mui/material'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import CssBaseline from '@mui/material/CssBaseline'
+import store, { RootState } from './redux/store'
+import AppRouter from './routers/AppRouter'
 
 function App() {
-   return (
+  return (
     <BrowserRouter>
       <Provider store={store}>
-        <Suspense fallback="loading">
-          <AppRouter />
-        </Suspense>
+        <ThemeApp />
       </Provider>
     </BrowserRouter>
+  )
+}
+
+function ThemeApp() {
+  const { theme } = useSelector((state: RootState) => state.theme)
+  return (
+    <ThemeProvider
+      theme={createTheme({
+        palette: {
+          mode: theme,
+        },
+      })}
+    >
+      <CssBaseline />
+      <Suspense fallback="loading">
+        <AppRouter />
+      </Suspense>
+    </ThemeProvider>
   )
 }
 

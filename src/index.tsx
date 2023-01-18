@@ -1,17 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.scss'
+import ReactDOM from 'react-dom'
 import App from './App'
+import './index.scss'
+import 'primereact/resources/themes/tailwind-light/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
 
 // You need bootstrap? $ yarn add bootstrap
 // See: https://create-react-app.dev/docs/adding-bootstrap
 // import 'bootstrap/dist/css/bootstrap.css';
 
 // Single-page application (SPA)
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(
-    <App />
-);
+ReactDOM.render(<App />, document.getElementById('root'))
 
 // If you want to Pre-render with react-snap
 // Step 1: install $ yarn add --dev react-snap

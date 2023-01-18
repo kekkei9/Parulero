@@ -2,12 +2,15 @@
 
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import authenticationReducer from './authentication/authentication.slice'
+import firstVisitReducer from './firstVisit/firstVisit.slice'
+import themeReducer from './theme/theme.slice'
 
 const store = configureStore({
   reducer: combineReducers({
     // your reducers goes here
     authentication: authenticationReducer,
-    
+    firstVisit: firstVisitReducer,
+    theme: themeReducer
   }),
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

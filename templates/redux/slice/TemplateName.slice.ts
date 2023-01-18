@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 type TemplateNameState = {}
 
-let initialState: TemplateNameState = {}
+const initialState: TemplateNameState = {}
 
 const templateNameSlice = createSlice({
   name: 'templateName',

@@ -4,7 +4,7 @@ type FirstVisitState = {
   isVisited: boolean
 }
 
-let initialState: FirstVisitState = {
+const initialState: FirstVisitState = {
   isVisited: !!localStorage.getItem('isVisited')
 }
 
