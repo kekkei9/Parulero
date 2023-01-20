@@ -1,2 +1,8 @@
 .FirstPage {
+  .inverted {
+    filter: invert(1);
+  }
+  .change-theme-btn:hover {
+    cursor: pointer;
+  }
 }

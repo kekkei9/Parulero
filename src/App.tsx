@@ -27,6 +27,9 @@ function ThemeApp() {
         palette: {
           mode: theme,
         },
+        typography: {
+          fontFamily: ['Josefin Sans', 'sans-serif'].join(),
+        },
       })}
     >
       <CssBaseline />

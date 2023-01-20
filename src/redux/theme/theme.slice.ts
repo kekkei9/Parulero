@@ -7,7 +7,7 @@ type ThemeState = {
 }
 
 const initialState: ThemeState = {
-  theme: window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light',
+  theme: localStorage.getItem('theme') || window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
 }
 
 const themeSlice = createSlice({
