@@ -2,7 +2,60 @@
   .inverted {
     filter: invert(1);
   }
-  .change-theme-btn:hover {
+  .mixBlendDiff {
+    mix-blend-mode: difference;
+    color: #fff;
+  }
+  .change-theme-btn {
+    background-color: black;
+    position: relative;
     cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: 1000ms;
+    z-index: 2;
+  }
+  .dark-mode-spread {
+    position: relative;
+    transform: scale(0);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 250vw;
+    height: 250vw;
+    border-radius: 50%;
+    transition: 1000ms ease-in-out;
+    display: flex;
+    display: flex;
+    flex: 0 0 auto;
+  }
+
+  .dark-mode-spread.active {
+    transform: scale(1);
+    transition: 1000ms ease-in-out;
+  }
+  .theme-change-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+  }
+  h2 {
+    position: absolute;
+    mix-blend-mode: difference;
+  }
+  .keo {
+    mix-blend-mode: difference;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dark-mode-spread {
+    width: 250vh;
+    height: 250vh;
   }
 }
