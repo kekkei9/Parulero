@@ -7,7 +7,6 @@
     color: #fff;
   }
   .change-theme-btn {
-    background-color: black;
     position: relative;
     cursor: pointer;
     width: 48px;
@@ -37,19 +36,13 @@
     transition: 1000ms ease-in-out;
   }
   .theme-change-container {
+    top: 390px;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 20px;
     height: 20px;
-  }
-  h2 {
-    position: absolute;
-    mix-blend-mode: difference;
-  }
-  .keo {
-    mix-blend-mode: difference;
   }
 }
 
