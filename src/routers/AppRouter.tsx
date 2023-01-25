@@ -8,7 +8,7 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage'
 
 const AppRouter = () => (
   <Routes>
-    <Route path="*" element={<ErrorPage code={404} />} />
+    <Route path="/*" element={<ErrorPage code={404} />} />
     <Route path="/" element={<HomePage />} />
     <Route path="/first" element={<FirstPage />} />
     {/* for production deployment */}

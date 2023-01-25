@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { Provider, useSelector } from 'react-redux'
 import './App.scss'
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -11,11 +11,11 @@ import AppRouter from './routers/AppRouter'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <ThemeApp />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
