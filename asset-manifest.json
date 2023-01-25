@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Parulero/static/css/main.f307d4a6.css",
-    "main.js": "/Parulero/static/js/main.5022cfad.js",
+    "main.js": "/Parulero/static/js/main.3e2d028b.js",
     "static/media/primeicons.svg": "/Parulero/static/media/primeicons.e1441b135b3ca9ad643c.svg",
     "static/media/Inter-Bold.woff": "/Parulero/static/media/Inter-Bold.93c1301bd9f486c573b3.woff",
     "static/media/Inter-SemiBold.woff": "/Parulero/static/media/Inter-SemiBold.cca62d21c8c555c392e5.woff",
@@ -19,10 +19,10 @@
     "static/media/primeicons.woff2": "/Parulero/static/media/primeicons.78172950b335ccdb94e2.woff2",
     "index.html": "/Parulero/index.html",
     "main.f307d4a6.css.map": "/Parulero/static/css/main.f307d4a6.css.map",
-    "main.5022cfad.js.map": "/Parulero/static/js/main.5022cfad.js.map"
+    "main.3e2d028b.js.map": "/Parulero/static/js/main.3e2d028b.js.map"
   },
   "entrypoints": [
     "static/css/main.f307d4a6.css",
-    "static/js/main.5022cfad.js"
+    "static/js/main.3e2d028b.js"
   ]
 }
