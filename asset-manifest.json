@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/parulero/static/css/main.e496d0ec.css",
+    "main.js": "/parulero/static/js/main.cbb41d33.js",
+    "static/media/primeicons.svg": "/parulero/static/media/primeicons.e1441b135b3ca9ad643c.svg",
+    "static/media/Inter-Bold.woff": "/parulero/static/media/Inter-Bold.93c1301bd9f486c573b3.woff",
+    "static/media/Inter-SemiBold.woff": "/parulero/static/media/Inter-SemiBold.cca62d21c8c555c392e5.woff",
+    "static/media/Inter-Medium.woff": "/parulero/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Light.woff": "/parulero/static/media/Inter-Light.994e34451cc19ede31d3.woff",
+    "static/media/Inter-Regular.woff": "/parulero/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Bold.woff2": "/parulero/static/media/Inter-Bold.ec64ea577b0349e055ad.woff2",
+    "static/media/Inter-Medium.woff2": "/parulero/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-SemiBold.woff2": "/parulero/static/media/Inter-SemiBold.b5f0f109bc88052d4000.woff2",
+    "static/media/Inter-Light.woff2": "/parulero/static/media/Inter-Light.2d5198822ab091ce4305.woff2",
+    "static/media/Inter-Regular.woff2": "/parulero/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/primeicons.eot": "/parulero/static/media/primeicons.d44157bdfa026dc877af.eot",
+    "static/media/primeicons.woff": "/parulero/static/media/primeicons.10d3152104f2208ac82a.woff",
+    "static/media/primeicons.ttf": "/parulero/static/media/primeicons.ea5358601d0a3fd6670b.ttf",
+    "static/media/primeicons.woff2": "/parulero/static/media/primeicons.78172950b335ccdb94e2.woff2",
+    "index.html": "/parulero/index.html",
+    "main.e496d0ec.css.map": "/parulero/static/css/main.e496d0ec.css.map",
+    "main.cbb41d33.js.map": "/parulero/static/js/main.cbb41d33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e496d0ec.css",
+    "static/js/main.cbb41d33.js"
+  ]
+}
