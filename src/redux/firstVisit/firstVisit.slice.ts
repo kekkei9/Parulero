@@ -5,7 +5,7 @@ type FirstVisitState = {
 }
 
 const initialState: FirstVisitState = {
-  isVisited: !!localStorage.getItem('isVisited')
+  isVisited: localStorage.getItem('isVisited') === 'true'
 }
 
 const firstVisitSlice = createSlice({

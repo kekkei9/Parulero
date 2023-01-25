@@ -25,9 +25,13 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
 
   useEffect(() => {
     if (step > MAX_STEP) {
-      navigate('/home')
+      // write to local to know that first page passed
+      window.localStorage.setItem('isVisited', 'true')
+
+      // home navigate
+      navigate('/')
     }
-  }, [step])
+  }, [step, navigate])
 
   const itemData = [
     {

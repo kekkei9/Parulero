@@ -17,7 +17,7 @@ const HomePage = (props: IHomePageProps): JSX.Element => {
     if (!isVisited) {
       navigate('/first')
     }
-  }, [navigate])
+  }, [navigate, isVisited])
 
   return <div className="HomePage">HomePage</div>
 }
