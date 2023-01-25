@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/parulero/static/css/main.e496d0ec.css",
-    "main.js": "/parulero/static/js/main.cbb41d33.js",
+    "main.js": "/parulero/static/js/main.4ec04610.js",
     "static/media/primeicons.svg": "/parulero/static/media/primeicons.e1441b135b3ca9ad643c.svg",
     "static/media/Inter-Bold.woff": "/parulero/static/media/Inter-Bold.93c1301bd9f486c573b3.woff",
     "static/media/Inter-SemiBold.woff": "/parulero/static/media/Inter-SemiBold.cca62d21c8c555c392e5.woff",
@@ -19,10 +19,10 @@
     "static/media/primeicons.woff2": "/parulero/static/media/primeicons.78172950b335ccdb94e2.woff2",
     "index.html": "/parulero/index.html",
     "main.e496d0ec.css.map": "/parulero/static/css/main.e496d0ec.css.map",
-    "main.cbb41d33.js.map": "/parulero/static/js/main.cbb41d33.js.map"
+    "main.4ec04610.js.map": "/parulero/static/js/main.4ec04610.js.map"
   },
   "entrypoints": [
     "static/css/main.e496d0ec.css",
-    "static/js/main.cbb41d33.js"
+    "static/js/main.4ec04610.js"
   ]
 }
