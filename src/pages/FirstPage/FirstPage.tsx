@@ -5,6 +5,8 @@ import Button from '@mui/material/Button'
 import { Collapse } from '@mui/material'
 import { useSelector } from 'react-redux'
 import LightIcon from '@mui/icons-material/Light'
+import ImageList from '@mui/material/ImageList'
+import ImageListItem from '@mui/material/ImageListItem'
 import { RootState } from '../../redux/store'
 
 export interface IFirstPageProps {
@@ -18,6 +20,33 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
   const [circleClicked, setCircleClicked] = useState(false)
   const [circleCnt, setCircleCnt] = useState(0)
   const { theme } = useSelector((state: RootState) => state.theme)
+
+  const itemData = [
+    {
+      img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+      title: 'Breakfast',
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+      title: 'Burger',
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+      title: 'Camera',
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+      title: 'Coffee',
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+      title: 'Hats',
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+      title: 'Honey',
+    },
+  ]
 
   const themeColor = (bool) => ((theme === 'dark' ? !bool : bool) ? '#fff' : '#000')
 
@@ -62,20 +91,31 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
 
       {/* Greeting2 */}
 
-      <Collapse in={step <= 7}>
+      <Collapse in={step <= 5}>
         <div className="flex flex-col items-center text-3xl mixBlendDiff">
           <Collapse in={step >= 4} className="text-5xl">
             Next is to choose your music genre
           </Collapse>
-          <Collapse in={step >= 5}>Now choose 3 out of 6 pictures below</Collapse>
+          <Collapse in={step >= 5}>
+            <div>
+              Now choose 3 out of 6 pictures below
+              <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+                {itemData.map((item) => (
+                  <ImageListItem key={item.img}>
+                    <img src={`${item.img}?w=164&h=164&fit=crop&auto=format`} srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`} alt={item.title} loading="lazy" />
+                  </ImageListItem>
+                ))}
+              </ImageList>
+            </div>
+          </Collapse>
         </div>
       </Collapse>
 
-      <div className="flex flex-row m-5">
+      <div className="flex gap-5 m-5">
         <Button variant="contained" onClick={() => setStep((prev) => prev - 1)}>
           Previous
         </Button>
-        <Button variant="contained" className="ml-5" onClick={() => setStep((prev) => prev + 1)}>
+        <Button variant="contained" onClick={() => setStep((prev) => prev + 1)}>
           Next
         </Button>
       </div>
