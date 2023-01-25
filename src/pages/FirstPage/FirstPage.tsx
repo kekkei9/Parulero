@@ -15,11 +15,19 @@ export interface IFirstPageProps {
 }
 
 const FirstPage = (props: IFirstPageProps): JSX.Element => {
+  const MAX_STEP = 7
+
   const navigate = useNavigate()
   const [step, setStep] = useState(0)
   const [circleClicked, setCircleClicked] = useState(false)
   const [circleCnt, setCircleCnt] = useState(0)
   const { theme } = useSelector((state: RootState) => state.theme)
+
+  useEffect(() => {
+    if (step > MAX_STEP) {
+      navigate('/home')
+    }
+  }, [step])
 
   const itemData = [
     {
@@ -56,7 +64,7 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
   }
 
   return (
-    <div className="FirstPage flex flex-col h-screen items-center justify-center" style={{ backgroundColor: '#000' }}>
+    <div className="FirstPage flex flex-col h-screen items-center justify-center text-3xl" style={{ backgroundColor: '#000' }}>
       <div className="theme-change-container">
         <div
           className={`dark-mode-spread ${(() => {
@@ -71,7 +79,7 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
 
       {/* Gretting 1 */}
       <Collapse in={step <= 3}>
-        <div className="flex flex-col items-center mixBlendDiff text-3xl">
+        <div className="flex flex-col items-center mixBlendDiff">
           <Collapse in={step >= 0} className="text-5xl">
             Hi there! I'm kekkei
           </Collapse>
@@ -92,7 +100,7 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
       {/* Greeting2 */}
 
       <Collapse in={step <= 5}>
-        <div className="flex flex-col items-center text-3xl mixBlendDiff">
+        <div className="flex flex-col items-center mixBlendDiff">
           <Collapse in={step >= 4} className="text-5xl">
             Next is to choose your music genre
           </Collapse>
@@ -111,12 +119,21 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
         </div>
       </Collapse>
 
+      {/* Greeting 3 ~ END */}
+
+      <Collapse in={step <= 7}>
+        <div className="flex flex-col items-center mixBlendDiff">
+          <Collapse in={step >= 6}>Okay! Now I know your types of music</Collapse>
+          <Collapse in={step >= 7}>Let's go</Collapse>
+        </div>
+      </Collapse>
+
       <div className="flex gap-5 m-5">
         <Button variant="contained" onClick={() => setStep((prev) => prev - 1)}>
           Previous
         </Button>
         <Button variant="contained" onClick={() => setStep((prev) => prev + 1)}>
-          Next
+          {step < MAX_STEP ? 'Next' : 'Finish'}
         </Button>
       </div>
     </div>
