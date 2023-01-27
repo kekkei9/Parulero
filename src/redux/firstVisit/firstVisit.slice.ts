@@ -12,7 +12,7 @@ const firstVisitSlice = createSlice({
   name: 'firstVisit',
   initialState,
   reducers: {
-    setVisited: (state) => ({ isVisited: false }),
+    setVisited: (state) => ({ isVisited: !state.isVisited }),
   },
 })
 

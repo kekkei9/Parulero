@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import './FirstPage.scss'
 import Button from '@mui/material/Button'
 import { Collapse } from '@mui/material'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import LightIcon from '@mui/icons-material/Light'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import { RootState } from '../../redux/store'
+import { setVisited } from '../../redux/firstVisit/firstVisit.slice'
 
 export interface IFirstPageProps {
   // TODO
@@ -18,6 +19,7 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
   const MAX_STEP = 7
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const [step, setStep] = useState(0)
   const [circleClicked, setCircleClicked] = useState(false)
   const [circleCnt, setCircleCnt] = useState(0)
@@ -28,10 +30,12 @@ const FirstPage = (props: IFirstPageProps): JSX.Element => {
       // write to local to know that first page passed
       window.localStorage.setItem('isVisited', 'true')
 
+      dispatch(setVisited())
+
       // home navigate
       navigate('/')
     }
-  }, [step, navigate])
+  }, [step, navigate, dispatch])
 
   const itemData = [
     {
